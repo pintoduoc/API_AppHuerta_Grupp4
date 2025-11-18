@@ -48,6 +48,7 @@ public class ProductoService {
                 buscado.setNombre(producto.getNombre());
                 buscado.setDescripcion(producto.getDescripcion());
                 buscado.setPrecio(producto.getPrecio());
+                buscado.setImagenId(producto.getImagenId());
                 productoRepository.save(buscado);
                 return buscado;
             }else {

@@ -30,7 +30,7 @@ public class ProductoController {
     }
 
     @PostMapping
-    @Operation(summary = "Añadir producto", description = "Añade un producto a la base de datos. Requiere: nombre, descripcion y precio")
+    @Operation(summary = "Añadir producto", description = "Añade un producto a la base de datos. Requiere: nombre, descripcion, precio y imagenId")
     public EntityModel<Producto> addProducto(@RequestBody Producto producto) {
         Producto nuevo = productoService.addProducto(producto);
         if (nuevo != null) {
@@ -58,7 +58,7 @@ public class ProductoController {
     }
 
     @PutMapping("/{id}")
-    @Operation(summary = "Actualizar producto", description = "Actualiza un producto. Requiere: ID del producto a actualizar, nuevo nombre, nueva descripcion y nuevo precio")
+    @Operation(summary = "Actualizar producto", description = "Actualiza un producto. Requiere: ID del producto a actualizar, nuevo nombre, nueva descripcion, nuevo precio y nuevo imagenId")
     public EntityModel<Producto> updateProducto(@PathVariable int id, @RequestBody Producto producto) {
         Producto nuevoProducto = productoService.updateProducto(id, producto);
         if (nuevoProducto != null) {
