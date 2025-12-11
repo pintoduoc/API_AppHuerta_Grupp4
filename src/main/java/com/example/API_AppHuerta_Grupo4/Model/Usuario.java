@@ -22,4 +22,5 @@ public class Usuario {
     private String clave;
     private String direccion;
     private Boolean AceptaTerminos;
+    private boolean admin;
 }

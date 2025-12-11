@@ -51,6 +51,7 @@ public class UsuarioService {
             buscado.setClave(usuario.getClave());
             buscado.setDireccion(usuario.getDireccion());
             buscado.setAceptaTerminos(usuario.getAceptaTerminos());
+            buscado.setAdmin(usuario.isAdmin());
             usuarioRepository.save(buscado);
             return buscado;
         }else {
